@@ -12,4 +12,9 @@ abstract class _TodoStore with Store {
   void add(Todo todo) {
     todos.add(todo);
   }
+
+  @action
+  void remove(Todo todo) {
+    todos.remove(todo);
+  }
 }

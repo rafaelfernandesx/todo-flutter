@@ -38,6 +38,17 @@ mixin _$TodoStore on _TodoStore, Store {
   }
 
   @override
+  void remove(Todo todo) {
+    final _$actionInfo =
+        _$_TodoStoreActionController.startAction(name: '_TodoStore.remove');
+    try {
+      return super.remove(todo);
+    } finally {
+      _$_TodoStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 todos: ${todos}
